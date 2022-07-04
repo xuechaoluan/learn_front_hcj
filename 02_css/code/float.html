@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float属性</title>
+    <style>
+        .container {
+            border: 1px solid salmon;
+            /* 解决父元素高度塌陷问题 */
+            /*overflow: hidden;*/
+        }
+        .container:after {
+            /* 此方法也可以清除浮动 */
+            /*content: '';*/
+            /*display: block;*/
+            /*clear: both;*/
+        }
+        .demo {
+            border: 1px solid royalblue;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        .demo1 {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            /* 浮动元素后面的元素清除浮动，但拯救不了父元素高度塌陷，也可以给父元素固定高度(但不推荐) */
+            /*clear: both;*/
+        }
+
+        /* 也可以设置一个空元素专门清除浮动*/
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="demo"></div>
+        <div class="demo" style="float: right"></div>
+        <div class="clear"></div>
+    </div>
+    <div class="demo1"></div>
+</body>
+</html>
