@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        /*
+            当使用padding后，盒子宽度会增加，使用box-sizing: border-box，内部消化其宽度，整体不变
+            1. 只有width的情况下，是盒子元素 包含 border的宽度
+            2. 有width和padding， 盒子宽度 = width + padding + border
+            3. box-sizing: border-box， 盒子宽度 包含了 元素、padding、border的
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .simple {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid orange;
+        }
+
+        .fancy {
+            max-width: 600px;
+            margin: 10px auto;
+            padding: 0 20px;
+            border: 1px solid greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="simple">
+        普通的盒子
+    </div>
+
+    <div class="fancy">
+        有内边距的盒子
+    </div>
+
+</body>
+</html>

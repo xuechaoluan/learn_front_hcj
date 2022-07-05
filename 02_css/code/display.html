@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display属性</title>
+    <style>
+        /*
+            1. div元素是一个block元素，默认不带边距，可以用来包裹内联元素进行换行
+        */
+
+        div {
+            background-color: aqua;
+            border: 1px solid yellowgreen;
+        }
+
+        span {
+            background-color: coral;
+            border: 1px solid rebeccapurple;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    div：块元素 display默认为block
+</div>
+<span>
+        span: 行内元素 display 默认为 inline
+    </span>
+
+<p class="hidden">visibility 是 hiddlen</p>
+
+<p class="none">display 是 none</p>
+
+<p>上面有两个隐藏元素</p>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        /* 
+            1. absolute （脱离文档流，原本位置不在）
+            2. positon：fixed（脱离文档流，原本位置不在）
+            3. position:relative（未脱离文档流，原本位置仍在）
+            4. position:static（默认值，正常显示）
+        */
+
+        body {
+            margin: 0;
+        }
+
+        .relativel {
+            max-width: 300px;
+            position: relative;
+            border: 1px solid salmon;
+            top: 5px;
+            left: 10px;
+            margin: 0 auto;
+        }
+
+        .absolute {
+            width: 300px;
+            position: absolute;
+            border: 1px solid fuchsia;
+            top: 210px;
+            left: 300px;
+            /* margin: 0 auto;  脱离文档流，该属性无效*/
+        }
+
+        .fixed {
+            width: 300px;
+            margin: 0 auto;
+            position: fixed;
+            border: 1px solid fuchsia;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="relativel">
+        relativel的盒子
+    </div>
+
+    <span>在一个relativel元素后面， 不会影响到我的</span>
+
+    <div class="absolute">
+        absolute的盒子 父元素没有position，所以相对body定位
+    </div>
+    <span>在一个absolute元素后面， 影响到我了</span>
+
+    <div class="fixed">
+        fixed的盒子
+    </div>
+
+</body>
+</html>

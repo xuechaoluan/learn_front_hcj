@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width和max-width</title>
+    <style>
+        /* .standard {
+            background-color: aqua;
+            border: 1px solid yellowgreen;
+            width: 600px;
+            margin: 0 auto;
+        } */
+
+        /*
+            窗口缩小时，小于设定的width，会出现滑块
+            max-width 可以处理小窗口的情况，推荐替换width使用
+            width 单位是百分比时 ，相对其父元素
+        */
+
+        .max {
+            background-color: orange;
+            border: 1px solid yellowgreen;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="standard">
+        with的div
+    </div>
+
+    <div class="max">
+        max-with的div
+    </div>
+
+</body>
+</html>
